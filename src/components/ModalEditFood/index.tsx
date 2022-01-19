@@ -13,10 +13,19 @@ interface EditFood {
   description: string;
 }
 
+interface IFood {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  available: boolean;
+  image: string;
+}
+
 interface ModalEditoFoodProps {
   isOpen: boolean;
   setIsOpen: () => void;
-  editingFood: () => void;
+  editingFood: IFood;
   handleUpdateFood: (data: EditFood) => void;
 }
 
